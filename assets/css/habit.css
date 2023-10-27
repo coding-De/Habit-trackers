@@ -1,0 +1,106 @@
+#habit #header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#habit #header #title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#habit #header #title img {
+  margin-left: 10px;
+}
+
+#habit #header #back_home {
+  border: 1px solid green;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #85B24D;
+  cursor: pointer;
+}
+
+#habit #header #back_home a {
+  text-decoration: none;
+  color: white;
+}
+
+#habit #date_container {
+  border-bottom: 2px solid black;
+  width: 60%;
+  margin: 20px auto 0;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#habit #date_container .date_picker {
+  width: 175px;
+  height: 25px;
+}
+
+#habit #date_container button {
+  width: 10%;
+  background-color: #4AB2F1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#habit #key {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#habit #key #unmarked {
+  color: gray;
+}
+
+#habit #key #done {
+  color: green;
+}
+
+#habit #key #not_done {
+  color: red;
+}
+
+#habit #habit_container {
+  width: 50%;
+  margin: 30px auto 0;
+}
+
+#habit #habit_container #item_list {
+  width: 90%;
+  height: 450px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  border: 1px solid purple;
+  border-radius: 5px;
+}
+
+#habit #habit_container #item_list .list_item {
+  width: 85%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px auto;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#habit #habit_container #item_list .list_item .date_div {
+  font-size: 25px;
+}
+
+#habit #habit_container #item_list .list_item .status {
+  font-size: 18px;
+}

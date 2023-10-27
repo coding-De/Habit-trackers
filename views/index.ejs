@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="../css/home.css">
+
+<div id="home">
+    <!-- header -->
+    <div id="header">
+
+        <!-- Header -->
+        <div id="title">
+            <h1>Habit Tracker</h1>
+        </div>
+
+        <!-- New habit -->
+        <div id="new_habit">
+            <form action="/addNewHabits" method="post">
+                <input type="text" name="habit_name" placeholder="Enter New Habit" required>
+                <button class="button" type="submit"><i class="fas fa-plus"></i> Create</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="list_name">
+        <h2>Habit List</h2>
+    </div>
+
+    <!-- List of habits -->
+    <div class="render_habits">
+        <ul class="habit_list">
+            <% for(const h_item of habit_list) { %>
+            <li class="habit_item" onclick="location.href='/viewHabit/?id=<%= h_item._id%>'">
+                <div class="habit_item_name"><span><%= h_item.habit_name %></span></div>
+                <div class="habit_delete">
+                    <a href="/deleteHabit/?id=<%= h_item._id %>">
+                         Delete
+                    </a>
+                </div>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+
+</div>

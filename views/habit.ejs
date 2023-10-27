@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="../css/habit.css"/>
+
+<div id="habit">
+
+    <!-- Navbar -->
+    <div id="header">
+
+        <!-- Header -->
+        <div id="title">
+            <h1>Habit Tracker</h1>
+        </div>
+
+        <!-- Habit name -->
+        <div id="habit_name">
+            <h1><%= habit.habit_name %></h1>
+        </div>
+
+        <!-- Back To Home -->
+        <div id="back_home">
+            <a href="/">Home</a>
+        </div>
+    </div>
+    
+    <!-- Date Picker -->
+    <div id="date_container">
+        <div>
+            From: 
+            <input type="date" name="start_date" id="start_date" class="date_picker" required>
+        </div>
+        <div>
+            To:
+            <input type="date" name="end_date" id="end_date" class="date_picker" required>
+        </div>
+
+        <button id="search"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <!-- Indicators -->
+    <div id="key">
+        <span>Key:</span>
+        <span id="unmarked">Unmarked</span>
+        <span id="done">Done</span>
+        <span id="not_done">Not Done</span>
+    </div>
+
+    <!-- Making Habit Details... -->
+    <div id="habit_container">
+        <ul id="item_list">
+            <li class="list_item">
+                <div class="date_div">Date 1</div>
+                <div class="status">Status 1</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="/js/moment.js"></script>
+<script src="/js/habit.js"></script>
